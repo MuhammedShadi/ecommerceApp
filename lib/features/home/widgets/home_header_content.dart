@@ -1,4 +1,6 @@
+import 'package:ecommerce/features/cart/cart_view.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../../../../../core/utils/size_config.dart';
 import '../../../../../../core/widgets/Custom_search_field.dart';
@@ -18,7 +20,9 @@ class HomeHeader extends StatelessWidget {
         children: [
           const BuildSearchProduct(),
           CustomIconBtnWithCounter(
-            onTap: () {},
+            onTap: () {
+              Get.to(()=>const CartView(),transition: Transition.fade);
+            },
             iconPath: "assets/icons/Cart Icon.svg",
             //numOfItems: 3,
           ),
