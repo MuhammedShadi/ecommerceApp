@@ -1,3 +1,5 @@
+// ignore_for_file: use_key_in_widget_constructors
+
 import 'package:ecommerce/features/auth/presentation/pages/registration/widgets/registeration_form_body.dart';
 import 'package:flutter/material.dart';
 import '../../../../../../core/utils/size_config.dart';
@@ -52,7 +54,7 @@ class _RegistrationViewBodyState extends State<RegistrationViewBody> {
                   buildText("Register Account", Colors.black,
                       getProportionateScreenWidth(28), FontWeight.bold),
                   buildText(
-                      "Complete your details \n or continue with social media accounts",
+                      "Complete your productDetails \n or continue with social media accounts",
                       Colors.black54,
                       getProportionateScreenWidth(10),
                       FontWeight.w500),

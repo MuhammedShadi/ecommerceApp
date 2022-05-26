@@ -1,3 +1,5 @@
+// ignore_for_file: use_key_in_widget_constructors
+
 import 'package:ecommerce/features/auth/presentation/pages/login/widgets/login_view_body.dart';
 import 'package:flutter/material.dart';
 

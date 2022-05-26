@@ -1,8 +1,12 @@
+// ignore_for_file: library_private_types_in_public_api
+
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../../../../../core/constants.dart';
 import '../../../../../../core/utils/size_config.dart';
 import '../../../../../../core/widgets/custom_button.dart';
+import '../../../../../home/home_view.dart';
 
 class OtpFormBody extends StatefulWidget {
   const OtpFormBody({
@@ -112,7 +116,9 @@ class _OtpFormBodyState extends State<OtpFormBody> {
             height: getProportionateScreenHeight(56),
             child: CustomGeneralButton(
               textButton: "Continue",
-              onTap: () {},
+              onTap: () {
+                Get.to(const HomeView(),transition: Transition.fade );
+              },
             ),
           )
         ],

@@ -1,7 +1,7 @@
+// ignore_for_file: use_key_in_widget_constructors, library_private_types_in_public_api
+
 import 'package:ecommerce/core/widgets/custom_button.dart';
-import 'package:ecommerce/features/auth/presentation/pages/success/succes_login_view.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import '../../../../../../core/constants.dart';
 import '../../../../../../core/utils/size_config.dart';
 import '../../../../../../core/widgets/custom_suffix_icon.dart';
@@ -100,7 +100,7 @@ class _ForgotPasswordFormBodyState extends State<ForgotPasswordFormBody> {
         // If  you are using latest version of flutter then lable text and hint text shown like this
         // if you r using flutter less then 1.20.* then maybe this is not working properly
         floatingLabelBehavior: FloatingLabelBehavior.always,
-        suffixIcon: CustomSuffixIcon(svgIcon: "assets/icons/Lock.svg"),
+        suffixIcon: const CustomSuffixIcon(svgIcon: "assets/icons/Lock.svg"),
       ),
     );
   }

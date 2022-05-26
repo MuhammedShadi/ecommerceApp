@@ -1,3 +1,5 @@
+// ignore_for_file: use_key_in_widget_constructors
+
 import 'package:ecommerce/features/auth/presentation/pages/registration/widgets/registration_body_view.dart';
 import 'package:flutter/material.dart';
 class RegistrationView extends StatelessWidget {

@@ -1,3 +1,5 @@
+// ignore_for_file: use_key_in_widget_constructors
+
 import 'package:ecommerce/core/constants.dart';
 import 'package:ecommerce/features/auth/presentation/pages/otp/otp_view.dart';
 import 'package:flutter/material.dart';
@@ -48,7 +50,7 @@ class _OtpBodyViewState extends State<OtpBodyView> {
                 ],
               ),
               SizedBox(height: SizeConfig.screenHeight * 0.04),
-              OtpFormBody(),
+              const OtpFormBody(),
               SizedBox(height: SizeConfig.screenHeight * 0.06),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,

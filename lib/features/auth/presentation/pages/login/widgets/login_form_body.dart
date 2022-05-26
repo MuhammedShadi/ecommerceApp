@@ -1,3 +1,5 @@
+// ignore_for_file: use_key_in_widget_constructors
+
 import 'package:ecommerce/core/constants.dart';
 import 'package:ecommerce/core/utils/size_config.dart';
 import 'package:ecommerce/core/widgets/custom_button.dart';

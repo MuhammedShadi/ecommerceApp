@@ -1,7 +1,7 @@
-import 'package:ecommerce/features/auth/presentation/pages/completeProfile/widgets/complete_registeration_form_body.dart';
-import 'package:ecommerce/features/auth/presentation/pages/registration/widgets/registeration_form_body.dart';
-import 'package:flutter/material.dart';
+// ignore_for_file: use_key_in_widget_constructors
 
+import 'package:ecommerce/features/auth/presentation/pages/completeProfile/widgets/complete_registeration_form_body.dart';
+import 'package:flutter/material.dart';
 import '../../../../../../core/utils/size_config.dart';
 import '../../login/widgets/login_view_body.dart';
 
@@ -28,7 +28,7 @@ class _CompleteProfileBodyState extends State<CompleteProfileBody> {
                   buildText("Complete Profile", Colors.black,
                       getProportionateScreenWidth(28), FontWeight.bold),
                   buildText(
-                      "Complete your details \n or continue with social media accounts",
+                      "Complete your productDetails \n or continue with social media accounts",
                       Colors.black54,
                       getProportionateScreenWidth(10),
                       FontWeight.w500),

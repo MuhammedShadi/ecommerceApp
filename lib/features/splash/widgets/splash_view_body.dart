@@ -1,5 +1,4 @@
 import 'package:ecommerce/core/constants.dart';
-import 'package:ecommerce/core/utils/size_config.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 

@@ -1,3 +1,5 @@
+// ignore_for_file: use_key_in_widget_constructors
+
 import 'package:ecommerce/core/utils/size_config.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -37,6 +39,7 @@ class _TextFormFieldContentState extends State<TextFormFieldContent> {
         } else {
           return null;
         }
+        return null;
       },
       decoration: InputDecoration(
         labelText: widget.labelTxt,

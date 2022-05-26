@@ -1,12 +1,15 @@
+// ignore_for_file: use_key_in_widget_constructors
+
 import 'package:ecommerce/core/utils/size_config.dart';
-import 'package:ecommerce/features/auth/presentation/pages/login/login_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../../../../core/widgets/custom_button.dart';
+import '../../../../../home/home_view.dart';
 
 
 class SuccessLoginBody extends StatelessWidget {
   const SuccessLoginBody({Key? key});
+  @override
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
@@ -28,18 +31,18 @@ class SuccessLoginBody extends StatelessWidget {
             color: Colors.black,
           ),
         ),
-        Spacer(),
+        const Spacer(),
         SizedBox(
           width: SizeConfig.screenWidth * 0.6,
           height: getProportionateScreenHeight(56),
           child: CustomGeneralButton(
             textButton: "Back to home",
             onTap: () {
-              Get.to(() => const LoginView(), transition: Transition.fade);
+              Get.to(() => const HomeView(), transition: Transition.fade);
             },
           ),
         ),
-        Spacer(),
+        const Spacer(),
       ],
     );
   }

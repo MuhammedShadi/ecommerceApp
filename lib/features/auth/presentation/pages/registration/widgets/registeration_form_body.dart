@@ -1,4 +1,5 @@
-import 'package:ecommerce/features/auth/presentation/pages/completeProfile/complete_profile_view.dart';
+// ignore_for_file: use_key_in_widget_constructors
+
 import 'package:ecommerce/features/auth/presentation/pages/otp/otp_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -7,7 +8,7 @@ import '../../../../../../core/utils/size_config.dart';
 import '../../../../../../core/widgets/custom_button.dart';
 import '../../../../../../core/widgets/custom_suffix_icon.dart';
 import '../../../../../../core/widgets/form_error.dart';
-import '../../success/succes_login_view.dart';
+
 class RegistrationFormBody extends StatefulWidget {
   const RegistrationFormBody({Key? key});
 

@@ -1,8 +1,6 @@
 import 'package:ecommerce/features/auth/presentation/pages/otp/otp_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_navigation/src/routes/transitions_type.dart';
-
 import '../../../../../../core/constants.dart';
 import '../../../../../../core/utils/size_config.dart';
 import '../../../../../../core/widgets/custom_button.dart';
