@@ -3,21 +3,45 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/size_config.dart';
+import '../constants.dart';
 
 class CustomIconButton extends StatelessWidget {
-  const CustomIconButton({Key? key,required this.iconData,required this.onTap});
-  final IconData? iconData;
-  final GestureTapCallback? onTap;
+  const CustomIconButton(
+      {Key? key,
+      required this.icon,
+      required this.press,
+      this.showShadow = false,});
+
+  final IconData icon;
+  final GestureTapCancelCallback press;
+  final bool showShadow;
+
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return Container(
       height: getProportionateScreenWidth(40),
       width: getProportionateScreenWidth(40),
-      child: MaterialButton(
-        padding: EdgeInsets.zero,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(55)),
-        onPressed: onTap,
-        child:  Icon(iconData!),
+      decoration: BoxDecoration(
+        shape: BoxShape.circle,
+        boxShadow: [
+          if (showShadow)
+            BoxShadow(
+              offset: const Offset(0, 6),
+              blurRadius: 10,
+              color: const Color(0xFFB0B0B0).withOpacity(0.2),
+            ),
+        ],
+      ),
+      child: TextButton(
+        style: TextButton.styleFrom(
+          padding: EdgeInsets.zero,
+          primary: kPrimaryColor,
+          backgroundColor: Colors.white,
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
+        ),
+        onPressed: press,
+        child: Icon(icon),
       ),
     );
   }

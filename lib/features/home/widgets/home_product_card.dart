@@ -9,47 +9,55 @@ import 'home_section_scrollable_items.dart';
 import '../../../../../../core/constants.dart';
 import '../../../../../../core/utils/size_config.dart';
 
-
 class ProductCardWithText extends StatelessWidget {
   const ProductCardWithText({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Column(children: [
-      SectionScrollableItems(
-        text: 'Popular Products',
-        onTap: () {},
-      ),
-      SizedBox(height: getProportionateScreenWidth(10)),
-      SingleChildScrollView(
-        scrollDirection: Axis.horizontal,
-        child: Row(
-          children: [
-            ...List.generate(demoProducts.length,
-                    (index) => ProductCard(product: demoProducts[index], onTap: () {
-                      Get.to(const ProductDetailsView(),transition: Transition.fade,arguments: demoProducts[index]);
-                    },)),
-            SizedBox(width: getProportionateScreenWidth(20)),
-          ],
+    return Column(
+      children: [
+        SectionScrollableItems(
+          text: 'Popular Products',
+          onTap: () {},
         ),
-      ),
-    ],);
+        SizedBox(height: getProportionateScreenWidth(10)),
+        SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            children: [
+              ...List.generate(
+                  demoProducts.length,
+                  (index) => ProductCard(
+                        product: demoProducts[index],
+                        onTap: () {
+                          Get.to(() => const ProductDetailsView(),
+                              transition: Transition.fade,
+                              arguments: ProductDetailsArguments(
+                                  product: demoProducts[index]));
+                        },
+                      )),
+              SizedBox(width: getProportionateScreenWidth(20)),
+            ],
+          ),
+        ),
+      ],
+    );
   }
 }
-
-
 
 class ProductCard extends StatelessWidget {
   const ProductCard({
     Key? key,
     this.width = 140.0,
     this.aspectRation = 1.02,
-    required this.product,required this.onTap,
+    required this.product,
+    required this.onTap,
   });
 
   final double? width, aspectRation;
   final Product? product;
   final GestureTapCallback? onTap;
+
   @override
   Widget build(BuildContext context) {
     return Padding(

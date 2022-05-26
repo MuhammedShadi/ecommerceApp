@@ -1,10 +1,8 @@
 // ignore_for_file: use_key_in_widget_constructors
-
 import 'package:ecommerce/features/auth/presentation/manger/models/product.dart';
 import 'package:flutter/material.dart';
-import '../../core/widgets/custom_icon_button.dart';
+import '../../core/widgets/custom_app_bar.dart';
 import 'widgets/product_details_body.dart';
-
 
 class ProductDetailsView extends StatelessWidget {
   const ProductDetailsView({Key? key});
@@ -13,16 +11,17 @@ class ProductDetailsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: const Color(0xfff5f6f9),
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        leading: CustomIconButton(iconData: Icons.arrow_back, onTap: () { Navigator.pop(context); },),
+    final ProductDetailsArguments arguments =
+    ModalRoute.of(context)!.settings.arguments as ProductDetailsArguments;
+    return  Scaffold(
+      backgroundColor: const Color(0xFFF5F6F9),
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(AppBar().preferredSize.height),
+        child: CustomAppBar(rating: arguments.product!.rating),
       ),
-      body: const ProductDetailsBody(),
+      body:  ProductDetailsBody(product: arguments.product,),
     );
   }
-
 }
 
 class ProductDetailsArguments {
